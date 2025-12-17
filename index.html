@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MY CV</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #f2f2f2;
+      margin: 0;
+    }
+
+    header {
+      background: #2b59c3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      margin: 12px;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      margin: 6px 0;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #2b59c3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .out {
+      background: #111;
+      color: #00ff88;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
+      min-height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CHINTHAKA LAKMAL MUNASINGHE</h1>
+  <p>Date: <span id="today"></span></p>
+</header>
+
+<div class="box">
+  <h2>Personal Details</h2>
+  <p><b>Name:</b>Chinthaka Lakmal Munasinghe</p>
+  <p><b>Email:</b> chinthakalakmal392@gmail.com</p>
+  <p><b>Phone:</b> +94817172392</p>
+  <p><b>About Me:</b> I am a student learning HTML, CSS, and JavaScript.</p>
+</div>
+
+<div class="box">
+  <h2>Mini Project</h2>
+  <p><b>Project Title:</b> Student Information Table</p>
+  <p><b>Description:</b> This project is about Student Information .</p>
+</div>
+
+<div class="box">
+  <h2>Mini Project Screenshots</h2>
+  
+  <img src="1.jpg" alt="Desktop View ">
+  <img src="2.jpg" alt="Mobile View ">
+</div>
+
+<div class="box">
+  <h2>Comment </h2>
+  <p>Type and click the button:</p>
+
+  <input id="textBox" placeholder="Type something...">
+  <button onclick="reverseText()">Send</button>
+
+  <div class="out" id="output">Result will show here...</div>
+</div>
+
+<script>
+  
+  document.getElementById("today").innerHTML = new Date().toDateString();
+
+
+  function reverseText() {
+    var text = document.getElementById("textBox").value;
+    var result = text.split("").reverse().join("");
+    document.getElementById("output").innerHTML = result;
+  }
+</script>
+
+</body>
+</html>
